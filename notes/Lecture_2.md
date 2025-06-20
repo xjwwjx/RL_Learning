@@ -44,3 +44,31 @@ MDP + Policy
 ## Value Iteration
 
 ![alt text](../images/image-19.png)
+
+# 几个重要概念
+
+## State Value
+在策略$\pi$下的状态值函数$V_\pi(s)$表示从状态s开始，按照策略$\pi$所能获得的期望回报。
+### Return与State Value的区别
+Return是指从一个状态s开始，按照策略$\pi$所能获得的回报，而State Value是指从状态s开始，按照策略$\pi$所能获得的期望回报。换句话说，Return是一个具体的数值，而State Value是一个期望值。
+
+## Bellman Equation
+![alt text](../images/Bellman_Equation.png)
+
+## Policy Evaluation
+现在有一个策略，我们要评价这个策略的优劣，就可以使用Bellman Equation来计算State Value。
+
+## 计算State Value
+
+如果直接用线性代数的方法来计算State Value，复杂度是$O(n^3)$，其中n是状态的数量。
+
+可以用一个迭代算法来近似计算State Value，复杂度是$O(n^2)$：
+- 首先设定一个初始值$V_0(s)$，可以随机初始化，也可以设为0。
+- 然后将其代入贝尔曼公式，并反复更新$V(s)$，直到收敛为止。更新公式为：
+- 最后，当$V_k(s)$收敛时，就得到了State Value。
+**可以证明，这个迭代算法是可以得到State Value的。**
+
+
+## Action Value
+
+![alt text](../images/Action_Value.png)
