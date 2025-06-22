@@ -1,6 +1,6 @@
 # Introduction
 这个仓库会记录我学习强化学习的一些笔记。
-# Reference
+# Acknowledgement
 ```
 @book{zhao2025RLBook,
   title={Mathematical Foundations of Reinforcement Learning},
